@@ -43,14 +43,15 @@ html[data-route="liberation"] {
 }
 
 html, body {
-  width: 100%;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-serif);
-  line-height: 1.6;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-red) var(--bg-secondary);
+    width: 100%;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    line-height: 1.6;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-red) var(--bg-secondary);
+    transition: background-color 1s ease;
 }
 
 /* Custom Scrollbar */
@@ -309,7 +310,7 @@ html, body {
 
 .nav-logo {
   color: var(--accent-red);
-  font-weight: bold;
+  font-weight: medium;
 }
 
 .nav-links {
@@ -353,9 +354,9 @@ html, body {
 
 .hero-title-main {
   font-size: clamp(4.5rem, 9vw, 9.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -3px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: 3px;
   font-family: var(--font-serif);
   position: relative;
   text-shadow: 2px 2px 0 var(--bg-primary), 4px 4px 0 rgba(0,0,0,0.8);
@@ -1014,3 +1015,120 @@ html, body {
 }
 
 
+.archive-thumb {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+/* 가장 위에 나타날 인트로 화면 스타일 */
+.intro-screen {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('intro1.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    z-index: 10000; 
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+/* 새로 적용할 인트로 스타일 */
+.intro-screen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('zombie1intro.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    z-index: 99999 !important;
+    cursor: pointer !important;
+    transition: opacity 1s ease !important;
+}
+/* 인트로 이미지 영역 강제 삭제 */
+#first-intro {
+    display: none !important;
+}
+/* 상단 메뉴바 고정 */
+/* 상단 메뉴바 고정 및 스타일 수정 */
+.nav-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+    background-color: transparent !important; /* 블랙 띠 제거 (투명 처리) */
+    padding: 20px 5%; /* 좌우에 5%씩 여백을 주어 텍스트가 끝으로 붙는 것 방지 */
+    display: flex;
+    justify-content: space-between; /* 로고와 메뉴를 양 끝으로 배치 */
+    box-sizing: border-box; /* 패딩이 전체 너비에 포함되도록 설정 */
+}
+
+/* 본문 상단 여백 유지 */
+body {
+    padding-top: 80px !important; 
+}
+/* 저자 소개 모달창 디자인 */
+/* 1077행부터 1100행 자리에 아래 코드를 넣으세요 */
+
+/* 공통 모달 디자인 */
+.custom-modal {
+    position: fixed !important;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000 !important;
+    display: none; /* 처음에 안 보이게 */
+    justify-content: center; 
+    align-items: center;
+    color: white;
+}
+
+/* 저자 모달 상세 레이아웃 */
+.author-layout {
+    display: flex; 
+    gap: 40px; 
+    background: #1a1a1a; 
+    padding: 50px; 
+    border: 1px solid #333;
+    max-width: 800px;
+    position: relative; /* 닫기 버튼 위치 고정용 */
+}
+.author-photo { 
+    width: 300px; height: 400px; background: #333; flex-shrink: 0; 
+}
+.author-photo img { 
+    width: 100%; height: 100%; object-fit: cover; 
+}
+.author-info { 
+    flex: 1; text-align: left; 
+}
+.timeline { 
+    border-left: 2px solid #ff0000; padding-left: 20px; margin: 20px 0; 
+}
+.timeline-item { 
+    margin-bottom: 15px; color: #ccc; 
+}
+.timeline-item span { 
+    color: #ff0000; font-weight: bold; margin-right: 10px; 
+}
+.close-btn {
+    position: absolute; top: 10px; right: 10px;
+    background: none; border: 1px solid white; color: white;
+    padding: 5px 10px; cursor: pointer;
+}
+/* 상단 메뉴바 글씨 크기 통일 */
+.nav-link {
+    font-size: 16px !important; 
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    font-size: 16px !important;
+}
