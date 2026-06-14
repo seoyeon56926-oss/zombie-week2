@@ -121,6 +121,8 @@ function initTerminal() {
           
           terminalOverlay.classList.add('fade-out');
           document.getElementById('main-archive').classList.add('active');
+
+          window.scrollTo(0, 0);
           document.body.style.overflow = 'auto';
           
           // Trigger custom entry splash
@@ -264,25 +266,20 @@ const virusSVGContent = `
   <svg viewBox="0 0 100 100" class="virus-svg">
     <defs>
       <radialGradient id="virusGrad" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#da1212" stop-opacity="0.8"/>
-        <stop offset="55%" stop-color="#4d0707" stop-opacity="0.4"/>
+        <stop offset="0%" stop-color="#FF0000" stop-opacity="1.0"/> 
+        <stop offset="55%" stop-color="#FF0000" stop-opacity="0.8"/>
         <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <!-- Glowing Core -->
     <circle cx="50" cy="50" r="28" fill="url(#virusGrad)"/>
-    <!-- Outer Spikes -->
-    <path d="M50 10 L50 25 M50 90 L50 75 M10 50 L25 50 M90 50 L75 50 M22 22 L32 32 M78 78 L68 68 M22 78 L32 68 M78 22 L68 32" stroke="#da1212" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="50" cy="10" r="3" fill="#da1212"/>
-    <circle cx="50" cy="90" r="3" fill="#da1212"/>
-    <circle cx="10" cy="50" r="3" fill="#da1212"/>
-    <circle cx="90" cy="50" r="3" fill="#da1212"/>
-    <circle cx="22" cy="22" r="2.5" fill="#da1212"/>
-    <circle cx="78" cy="78" r="2.5" fill="#da1212"/>
-    <circle cx="22" cy="78" r="2.5" fill="#da1212"/>
-    <circle cx="78" cy="22" r="2.5" fill="#da1212"/>
-    <!-- Nucleus Membrane -->
-    <circle cx="50" cy="50" r="16" fill="none" stroke="#ece8de" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="2 2"/>
+    
+    <path d="M50 10 L50 25 M50 90 L50 75 M10 50 L25 50 M90 50 L75 50 M22 22 L32 32 M78 78 L68 68 M22 78 L32 68 M78 22 L68 32" 
+          stroke="#FF0000" stroke-width="6" stroke-linecap="round"/>
+    
+    <circle cx="50" cy="10" r="5" fill="#FF0000"/>
+    <circle cx="50" cy="90" r="5" fill="#FF0000"/>
+    <circle cx="10" cy="50" r="5" fill="#FF0000"/>
+    <circle cx="90" cy="50" r="5" fill="#FF0000"/>
   </svg>
 `;
 
@@ -581,4 +578,23 @@ function initScrollNav() {
     });
   }
 }
-
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  
+  // 스크롤을 500px 이상 내리면 붉은색으로, 아니면 검은색으로
+  if (scrollY > 500) {
+    document.body.style.backgroundColor = '#1a0000'; 
+  } else {
+    document.body.style.backgroundColor = '#000000'; 
+  }
+});
+// 5초 후 자동으로 인트로가 부드럽게 사라지는 코드
+setTimeout(() => {
+    const intro = document.getElementById('first-intro');
+    if (intro) {
+        intro.style.opacity = '0'; // 5초 뒤에 서서히 투명해짐
+        setTimeout(() => {
+            intro.style.display = 'none'; // 1초 뒤(총 6초 뒤) 완전히 제거
+        }, 1000);
+    }
+}, 5000); // 5초 대기
