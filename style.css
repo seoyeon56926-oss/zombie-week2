@@ -1376,3 +1376,25 @@ nav a {
     padding: 0 40px;
     text-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
 }
+
+.project-description {
+    position: absolute;
+    right: 120px;
+    bottom: 180px;
+
+    width: 420px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: 0.03em;
+
+    text-align: left;
+
+    z-index: 10;
+}
+
+.project-description p {
+    margin-bottom: 18px;
+}
