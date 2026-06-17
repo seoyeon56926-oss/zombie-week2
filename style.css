@@ -1422,4 +1422,6 @@ nav a {
     letter-spacing:1px;
     line-height:1.9;
     font-family:var(--font-sans);
+
+  transform: translateX(80px);
 }
