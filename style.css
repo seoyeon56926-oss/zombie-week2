@@ -503,7 +503,7 @@ html, body {
 }
 
 .spec-value {
-  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-family: var(--font-serif);
   font-weight: bold;
   color: var(--accent-red);
