@@ -1398,3 +1398,11 @@ nav a {
 .project-description p {
     margin-bottom: 18px;
 }
+
+.secondary-description {
+    margin-top: 34px;
+    opacity: 0.78;
+    font-size: 13px;
+    line-height: 2.05;
+    letter-spacing: -0.01em;
+}
