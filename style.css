@@ -1409,14 +1409,17 @@ nav a {
 
 .student-credit{
     width:100%;
+    max-width:800px;
+
+    margin:3rem auto 0;
     text-align:center;
-    margin-top:3rem;
+
     padding-top:1rem;
     border-top:1px solid rgba(255,255,255,0.08);
 
     color:#777;
     font-size:0.7rem;
     letter-spacing:1px;
-  line-height:1.9;
+    line-height:1.9;
     font-family:var(--font-sans);
 }
