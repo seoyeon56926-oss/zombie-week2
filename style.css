@@ -1362,3 +1362,17 @@ nav a {
     background: #a11;
     box-shadow: 0 0 20px rgba(255,0,0,0.4);
 }
+
+.quote-text {
+    text-align: center;
+    font-size: 32px;
+    color: #f0e6d2;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    padding: 0 40px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+}
