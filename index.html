@@ -918,6 +918,38 @@ function hideWorks() {
   function hideAuthor() {
     document.getElementById("author-modal").style.display = "none";
   }
+  <div id="works-modal" class="works-modal">
+  <div class="works-card">
+    <button class="works-close" onclick="hideWorks()">× CLOSE</button>
+
+    <span class="works-label">PROJECT ARCHIVE</span>
+    <h2>작업물</h2>
+    <p class="works-desc">
+      『좀비, 해방의 괴물』을 바탕으로 제작한 이미지, 움직이는 그래픽, 영상 아카이브입니다.
+    </p>
+
+    <div class="works-grid">
+      <div class="work-item">
+        <img src="work-image.jpg" alt="작업 이미지">
+        <p>IMAGE ARCHIVE</p>
+      </div>
+
+      <div class="work-item">
+        <img src="work-gif.gif" alt="움직이는 작업물">
+        <p>GIF ARCHIVE</p>
+      </div>
+
+      <div class="work-item video-item">
+        <iframe 
+          src="https://www.youtube.com/embed/유튜브영상ID"
+          title="YouTube video"
+          allowfullscreen>
+        </iframe>
+        <p>VIDEO ARCHIVE</p>
+      </div>
+    </div>
+  </div>
+</div>
 </script>
 </body>
 </html>
