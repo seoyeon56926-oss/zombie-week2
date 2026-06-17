@@ -60,7 +60,7 @@
     <li><a href="#about-map">철학</a></li>
     <li><a href="#chapters">목차</a></li>
     <li><a href="#archive">아카이브</a></li>
-   <li><a href="#" onclick="showAuthor()">저자</a></li>
+   <li><a href="javascript:void(0)" onclick="showAuthor()">저자</a></li>
    <li><a href="#" onclick="showWorks()">작업물</a></li>
 </ul>
       </nav>
@@ -884,5 +884,40 @@ function hideWorks() {
         </div>
     </div>
 </div>
+  <div id="author-modal" class="author-modal">
+  <div class="author-card">
+    <button class="author-close" onclick="hideAuthor()">× CLOSE</button>
+
+    <div class="author-photo">
+      <img src="author-image.jpg" alt="김형식 작가">
+    </div>
+
+    <div class="author-info">
+      <span>AUTHOR DATABASE</span>
+      <h2>김형식</h2>
+      <p class="author-role">『좀비, 해방의 괴물』 저자</p>
+
+      <p>
+        김형식은 좀비라는 대중문화적 형상을 통해 팬데믹, 재난,
+        자본주의, 생명정치, 유토피아의 문제를 철학적으로 사유한다.
+      </p>
+
+      <p>
+        『좀비, 해방의 괴물』은 좀비를 단순한 공포의 대상이 아닌,
+        현대 사회의 모순과 억압을 드러내는 사유의 장치로 해석한다.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showAuthor() {
+    document.getElementById("author-modal").style.display = "flex";
+  }
+
+  function hideAuthor() {
+    document.getElementById("author-modal").style.display = "none";
+  }
+</script>
 </body>
 </html>
