@@ -1144,12 +1144,13 @@ nav a {
 }
 
 .author-card {
-  width: min(820px, 90%);
+  width: min(1100px, 95%);
+    min-height: 650px;
   background: #0a0a0a;
   border: 1px solid #2a2a2a;
   padding: 42px;
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 36px;
   position: relative;
 }
@@ -1169,7 +1170,7 @@ nav a {
 }
 
 .author-photo {
-  width: 210px;
+  width: 300px;
   aspect-ratio: 210 / 297;
   background: #111;
   border: 1px solid #333;
